@@ -1,9 +1,10 @@
 import React from "react";
+import { LAMPORTS_PER_SOL } from "@solana/web3.js";
+
 import { useWallet } from "../context/wallet";
 import { shortenAddress } from "./../utils/utils";
 import { Identicon } from "./identicon";
 import { useNativeAccount } from "./../utils/accounts";
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 export const AccountInfo = (props: {}) => {
   const { wallet } = useWallet();
@@ -22,7 +23,7 @@ export const AccountInfo = (props: {}) => {
         {shortenAddress(`${wallet.publicKey}`)}
         <Identicon
           address={wallet.publicKey.toBase58()}
-          style={{ marginLeft: "0.5rem" }}
+          style={{ marginLeft: "0.5rem", height: '16px' }}
         />
       </div>
     </div>
