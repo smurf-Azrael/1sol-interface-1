@@ -91,9 +91,6 @@ export const CurrencyInput = (props: {
 
         <div
           className="ccy-input-header-right"
-          onClick={(e) =>
-            props.onInputChange && props.onInputChange(userUiBalance())
-          }
         >
           <div style={{color: '#fff', marginRight: '10px', lineHeight: 1}}>Balance: {userUiBalance().toFixed(6)}</div>
           {
